@@ -9,19 +9,7 @@ const LandingPage = ({setSelectedPage}) => {
 
     return(
         <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
-            <ReactSparkle 
-                color={'#f0f'}
-                count={80}
-                minSize={5}
-                maxSize={15}
-                overflowPx={20}
-                fadeOutSpeed={0}
-                newSparkleOnFadeOut={true}
-                flicker={true}
-                flickerSpeed={'slowest'}
-                height={'100vh'}
-                width={'100vw'}
-            />
+           
             {/* IMAGE SECTION */}
             <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
                 {isAboveMediumScreens ? (
@@ -45,6 +33,20 @@ const LandingPage = ({setSelectedPage}) => {
                         />
                 )}
             </div>
+                <ReactSparkle 
+                    color={'#f0f'}
+                    count={80}
+                    minSize={5}
+                    maxSize={15}
+                    overflowPx={20}
+                    fadeOutSpeed={0}
+                    newSparkleOnFadeOut={true}
+                    flicker={true}
+                    flickerSpeed={'slowest'}
+                    height={'100vh'}
+                    width={'100vw'}
+                    className="absolute top-0 left-0 z-0"
+                />
                 {/* MAIN SECTION  */}
                 <div className="z-30 basis-2/5 mt-12 md:mt-32">
                     {/* HEADINGS */}
