@@ -29,7 +29,7 @@ const MySkills = () => {
                     </p>
                 </motion.div>
             </div>
-            <div className="md:flex md:justify-between mt-16 gap-32 md:w-full">
+            <div className="md:flex md:justify-between mt-16 gap-32">
                 <motion.div
                     className="md:w-1/3 mt-10"
                     initial='hidden'

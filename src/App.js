@@ -41,7 +41,7 @@ function App() {
         <About />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-10 md:flex md:flex-grow ">
+      <div className="w-5/6 mx-auto md:h-full mb-10">
         <MySkills />
       </div>
       <LineGradient />
