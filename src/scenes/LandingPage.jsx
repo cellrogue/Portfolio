@@ -30,7 +30,7 @@ const LandingPage = ({setSelectedPage}) => {
                         before:border-2 before:border-purple before:z-[-1]"
                     >
                         <img 
-                            src="assets/profile.jpg" 
+                            src="assets/landing.jpg" 
                             alt="profile" 
                             className="hover:saturate-50 transition duration-500 z-10 w-full
                                 max-w-[400px] md:max-w-[600px] rounded"
@@ -38,7 +38,7 @@ const LandingPage = ({setSelectedPage}) => {
                     </div>
                 ): (
                         <img
-                            src="assets/profile.jpg" 
+                            src="assets/landing.jpg" 
                             alt="profile" 
                             className="hover:saturate-50 transition duration-500 z-10 w-full
                                 max-w-[400px] md:max-w-[600px] rounded-full border-purple border-4"
@@ -68,7 +68,7 @@ const LandingPage = ({setSelectedPage}) => {
                             </span>
                         </p>
                         <p className="mt-10 mb-7 font-silkscreen text-2xl text-center text-pale-pink md:text-start">
-                            👽Front-End Developer in Training👽
+                            👽 Front-End Developer in Training 👽
                         </p>
                     </motion.div>
                     {/* CALL TO ACTION */}
@@ -99,7 +99,7 @@ const LandingPage = ({setSelectedPage}) => {
                             <div className="bg-purple hover:text-dark-blue transition duration-500 font-semibold w-full h-full flex items-center
                                 justify-center font-montserrat px-10"
                             >
-                                ✨Contact Me!✨
+                                ✨ Contact Me! ✨
                             </div>
                         </AnchorLink>
                     </motion.div>

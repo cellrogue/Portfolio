@@ -6,7 +6,7 @@ const MySkills = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
     return (
-        <section id="skills" className="pt-32 pb-16">
+        <section id="skills" className="pt-32 pb-16 md:mb-20">
             <div className="md:flex md:justify-between md:gap-16 mt-32 text-center">
                 <motion.div
                     className="md:w-1/3"
@@ -20,7 +20,7 @@ const MySkills = () => {
                     }}
                 >
                     <p className="font-chakra-petch font-semibold text-4xl mb-5">
-                        <span className="text-white">✨SKILLS✨</span>
+                        <span className="text-white">✨ SKILLS ✨</span>
                     </p>
                     <LineGradient width="w-80%" />
 
@@ -29,7 +29,7 @@ const MySkills = () => {
                     </p>
                 </motion.div>
             </div>
-            <div className="md:flex md:justify-between mt-16 gap-32">
+            <div className="md:flex md:justify-between mt-16 gap-32 md:w-full">
                 <motion.div
                     className="md:w-1/3 mt-10"
                     initial='hidden'
@@ -226,7 +226,7 @@ const MySkills = () => {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <p className="font-silkscreen text-3xl mt-8">
+                    <p className="font-silkscreen text-3xl mt-8 mb-10">
                         ...👽And more!👽
                     </p>
                 </motion.div>

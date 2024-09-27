@@ -12,4 +12,6 @@ body,
   height: 100%;
   background-color: #17153B;
   @apply text-white;
+  min-height: 100vh;
+  margin-bottom: 80px;
 }
