@@ -6,7 +6,7 @@ const MySkills = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
     return (
-        <section id="skills" className="pt-32 pb-16 md:mb-20">
+        <section id="skills" className="pt-32 pb-32 md:pb-32">
             <div className="md:flex md:justify-between md:gap-16 mt-32 text-center">
                 <motion.div
                     className="md:w-1/3"
@@ -214,7 +214,7 @@ const MySkills = () => {
                     </div>
                 </motion.div>
             </div>
-            <div className="md:flex md:justify-between md:gap-16 mt-32 text-center">
+            <div className="md:pb-20 flex justify-end text-center">
                 <motion.div
                     className="md:w-1/3"
                     initial='hidden'
