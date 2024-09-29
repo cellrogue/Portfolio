@@ -6,20 +6,21 @@ import { useRef, useEffect, useState } from "react";
 const images = [
   "assets/beans3.jpg",
   "assets/bullet.jpg",
-  "assets/bag.jpg",
-  "assets/duck.jpg",
-  "assets/lake.jpg",
   "assets/beans2.jpg",
+  "assets/lake.jpg",
   "assets/rainbow.jpg",
-  "assets/gloves.jpg",
-  "assets/puzzle.jpg",
-  "assets/goat.jpg",
   "assets/view.jpg",
+  "assets/bag.jpg",
+  "assets/gloves.jpg",
+  "assets/duck.jpg",
+//   "assets/puzzle.jpg",
+//   "assets/jellyfish.jpg",
+//   "assets/goat.jpg",
 ];
 
 const About = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
-    const carouselRef = useRef(null); 
+    const carouselRef = useRef(null);
     const [carouselWidth, setCarouselWidth] = useState(0);
 
     useEffect(() => {
@@ -30,10 +31,11 @@ const About = () => {
     }, []);
 
     return (
-        <section id="about" className="pt-32 pb-16">
+        <section id="about" className="pt-32 pb-32">
             <div className="md:flex md:justify-between md:gap-16 mt-32 text-center">
+                {/* About Me Section */}
                 <motion.div
-                    className="md:w-1/3 text-center md:text-right"
+                    className="md:w-1/3 text-center md:text-left"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -58,29 +60,45 @@ const About = () => {
                     </p>
                 </motion.div>
 
-                {/* Draggable Image Carousel */}
-                <div className="mt-16 md:mt-0 w-full overflow-hidden cursor-grab">
-                    <motion.div
-                        ref={carouselRef}
-                        className="flex"
-                        drag="x"
-                        dragConstraints={{ right: 0, left: -carouselWidth }} 
-                        dragElastic={0.2} 
-                        whileTap={{ cursor: "grabbing" }}
-                    >
-                        {images.map((image, index) => (
+                {/* Image Carousel for small screens, Grid for large screens */}
+                <div className="mt-16 md:mt-0 w-full">
+                    {isAboveMediumScreens ? (
+                        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            {images.map((image, index) => (
+                                <div key={index} className="w-full h-[300px]">
+                                    <img
+                                        src={image}
+                                        alt={`grid-image-${index}`}
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="overflow-hidden cursor-grab">
                             <motion.div
-                                key={index}
-                                className="min-w-[300px] h-[400px] md:h-[800px] flex-shrink-0 p-4"
+                                ref={carouselRef}
+                                className="flex"
+                                drag="x"
+                                dragConstraints={{ right: 0, left: -carouselWidth }}
+                                dragElastic={0.2}
+                                whileTap={{ cursor: "grabbing" }}
                             >
-                                <img
-                                    src={image}
-                                    alt={`carousel-image-${index}`}
-                                    className="w-full h-full object-cover rounded-lg"
-                                />
+                                {images.map((image, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="min-w-[80%] sm:min-w-[50%] p-2"
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={`carousel-image-${index}`}
+                                            className="w-full h-[300px] sm:h-[400px] object-cover rounded-lg"
+                                        />
+                                    </motion.div>
+                                ))}
                             </motion.div>
-                        ))}
-                    </motion.div>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
